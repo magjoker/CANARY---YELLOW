@@ -1,12 +1,25 @@
 <div>
-  <h1>Login</h1>
-  <form id="login-form">
-    <h2>Username:</h2>
-    <input type="text" id="username-login">
-    <h2>Password:</h2>
-    <input type="text" id="password-login">
-    <button type="submit">Login</button>
-    <a href="/signup">Join The Elements</a>
+    <nav id="navbar">
+    <div id="hp-title">The Elements</div>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    {{#if logged_in}}
+    <a href="/">Logout</a>
+    {{/if}}
+    {{#unless logged_in}}
+    <a href="/login">Login</a>
+    {{/unless}}
+  </nav>
+  
+  <h1 id="login-title">LOGIN</h1>
+  <form class="form" id="login-form">
+    <h2 class="form-txt">Username:</h2>
+    <input type="text" id="username-login" class="form-inp">
+    <h2 class="form-txt">Password:</h2>
+    <input type="text" id="password-login" class="form-inp">
+    <button class="form-btn" type="submit">Login</button>
+
+    <a href="/signup" class="form-txt">Join The Elements</a>
   </form>
 </div>
 
