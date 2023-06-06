@@ -1,4 +1,15 @@
 <div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/dashboard">Dashboard</a>
+    {{#if logged_in}}
+    <a href="/">Logout</a>
+    {{/if}}
+    {{#unless logged_in}}
+    <a href="/login">Login</a>
+    {{/unless}}
+  </nav>
+  
   {{#each posts}}
     <h2> {{title}} </h2>
     <h3> {{body}} </h3>
