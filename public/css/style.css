@@ -122,3 +122,10 @@ body {
   letter-spacing: 0.099rem;
 }
 
+p .form-foot,
+a .form-foot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+}

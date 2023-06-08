@@ -3,7 +3,7 @@ const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth')
 
 router.get('/', async (req, res) => {
-  console.log("smashboard", req.session);
+  console.log("dashboard", req.session);
     try {
       // Get all posts and JOIN with user data
         const postData = await Post.findAll({
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
         // res.json(posts)
 
       // Pass serialized data and session flag into template
-        res.render('dashboard', { 
+        res.render('dash', { 
             posts, 
             logged_in: req.session.logged_in 
         });
