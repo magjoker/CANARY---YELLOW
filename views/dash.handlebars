@@ -1,3 +1,7 @@
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
 <div>
     <nav id="navbar">
         <div id="hp-title">The Elements</div>
@@ -10,9 +14,11 @@
         <a href="/login">Login</a>
         {{/unless}}
     </nav>
+
+
     {{#each posts}}
-        <h2 class="post-title"> {{title}} </h2>
-        <h3 class="post-body"> {{body}} </h3>
-        <h4 class="post-user">Posted by @{{user.username}}</h4>
+        <a href='/dash/edit/{{id}}'><h2 class="post-title"> {{title}} </h2></a>
+        <h3 class="post-body">{{body}}</h3>
     {{/each}}
+    <a href="/dash/newBanger"><button class="form-btn">Create a Post</button></a>
 </div>

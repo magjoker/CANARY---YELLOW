@@ -1,11 +1,19 @@
 <div id="onepost">
-    <h2>{{post.title}}</h2>
-    <h3>{{post.body}}</h3>
-    {{#if post.Comments}}
-    {{#each post.Comments}}
-    {{body}}
-    {{user.username}}
-    {{/each}}
-    {{/if}}
+    <h2 class="post-title">{{post.title}}</h2>
+    <h3 class="post-body">{{post.body}}</h3>
+{{#if post.Comments}}
+{{#each post.Comments}}
+{{body}}
+{{user.username}}
+{{/each}}
+{{/if}}
 
+    <form id="comment-form" class="form">
+        <h2 class="form-txt">Write a Comment!</h2>
+        <h3 class="form-txt">Body:</h3>
+        <input type="text" id="body-comment" class="form-inp">
+        <input type="hidden" id="postId" value={{post.id}}>
+        <button type="submit" class="form-btn">Create</button>
+    </form>
 </div>
+<script src="/js/comment.js"></script>

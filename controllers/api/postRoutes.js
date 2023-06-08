@@ -5,12 +5,12 @@ const withAuth = require('../../utils/auth');
 router.post('/', withAuth, async (req, res) => {
   console.log('Made a post');
   try {
-    const newPost = await Post.create({
+    const newBanger = await Post.create({
       ...req.body,
       userId: req.session.user_id,
     });
 
-    res.status(200).json(newPost);
+    res.status(200).json(newBanger);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -29,7 +29,7 @@ router.put('/:id', withAuth, async (req, res) => {
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/dash/edit/:id', withAuth, async (req, res) => {
   try {
     const postData = await Post.destroy({
       where: {
