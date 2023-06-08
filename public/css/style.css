@@ -19,7 +19,8 @@ body {
 } */
 
 #login-title,
-#signup-title {
+#signup-title,
+#post-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,6 +58,9 @@ body {
 }
 
 .form-btn{
+  display: grid;
+  justify-content: center;
+  align-items: center;
   margin-top: 1.550rem;
   border-radius: 0.339rem;
   padding: 0.339rem;
