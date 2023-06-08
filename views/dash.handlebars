@@ -1,0 +1,18 @@
+<div>
+    <nav id="navbar">
+        <div id="hp-title">The Elements</div>
+        <a href="/">Home</a>
+        <a href="/dash">Dashboard</a>
+        {{#if logged_in}}
+        <a href="/">Logout</a>
+        {{/if}}
+        {{#unless logged_in}}
+        <a href="/login">Login</a>
+        {{/unless}}
+    </nav>
+    {{#each posts}}
+        <h2 class="post-title"> {{title}} </h2>
+        <h3 class="post-body"> {{body}} </h3>
+        <h4 class="post-user">Posted by @{{user.username}}</h4>
+    {{/each}}
+</div>
